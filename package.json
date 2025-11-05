@@ -1,0 +1,16 @@
+{
+  "name": "style-guide-prototype",
+  "version": "1.0.0",
+  "description": "A style guide prototype with common UI components",
+  "scripts": {
+    "lint": "./lint.sh",
+    "lint:html": "prettier --check *.html",
+    "lint:css": "biome check --files-ignore-unknown=true *.css",
+    "format": "prettier --write *.html && biome check --write --files-ignore-unknown=true *.css"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "^1.9.4",
+    "prettier": "^3.3.3"
+  },
+  "license": "MIT"
+}

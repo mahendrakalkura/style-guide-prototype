@@ -1,0 +1,316 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Style Guide Prototype</title>
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body>
+    <!-- Header -->
+    <header class="header">
+      <div class="header-logo">StyleGuide</div>
+      <nav class="nav">
+        <a href="#" class="nav-link active">Home</a>
+        <a href="#" class="nav-link">Components</a>
+        <a href="#" class="nav-link">Documentation</a>
+        <a href="#" class="nav-link">About</a>
+      </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container">
+      <!-- Typography Section -->
+      <section>
+        <h1>Typography</h1>
+        <h1>Heading 1</h1>
+        <h2>Heading 2</h2>
+        <h3>Heading 3</h3>
+        <h4>Heading 4</h4>
+        <h5>Heading 5</h5>
+        <h6>Heading 6</h6>
+        <p>
+          This is a paragraph with some <strong>bold text</strong> and some
+          <em>italic text</em>. You can also have
+          <a href="#">links within paragraphs</a> that look great.
+        </p>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        </p>
+      </section>
+
+      <!-- Buttons Section -->
+      <section>
+        <h2>Buttons</h2>
+        <div class="flex gap-md" style="flex-wrap: wrap">
+          <button class="btn btn-primary">Primary Button</button>
+          <button class="btn btn-secondary">Secondary Button</button>
+          <button class="btn btn-success">Success Button</button>
+          <button class="btn btn-danger">Danger Button</button>
+          <button class="btn btn-outline">Outline Button</button>
+        </div>
+      </section>
+
+      <!-- Forms Section -->
+      <section>
+        <h2>Forms</h2>
+        <form>
+          <div class="form-group">
+            <label for="name" class="form-label">Name</label>
+            <input
+              type="text"
+              id="name"
+              class="form-input"
+              placeholder="Enter your name"
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="email" class="form-label">Email</label>
+            <input
+              type="email"
+              id="email"
+              class="form-input"
+              placeholder="Enter your email"
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="country" class="form-label">Country</label>
+            <select id="country" class="form-select">
+              <option>Select a country</option>
+              <option>United States</option>
+              <option>Canada</option>
+              <option>United Kingdom</option>
+              <option>Australia</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="message" class="form-label">Message</label>
+            <textarea
+              id="message"
+              class="form-textarea"
+              placeholder="Enter your message"
+            ></textarea>
+          </div>
+
+          <div class="form-group">
+            <div class="flex items-center gap-sm">
+              <input type="checkbox" id="subscribe" class="form-checkbox" />
+              <label for="subscribe" class="form-label" style="margin: 0"
+                >Subscribe to newsletter</label
+              >
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label">Preferences</label>
+            <div class="flex flex-col gap-sm">
+              <div class="flex items-center gap-sm">
+                <input
+                  type="radio"
+                  id="option1"
+                  name="preference"
+                  class="form-radio"
+                />
+                <label for="option1" style="margin: 0">Option 1</label>
+              </div>
+              <div class="flex items-center gap-sm">
+                <input
+                  type="radio"
+                  id="option2"
+                  name="preference"
+                  class="form-radio"
+                />
+                <label for="option2" style="margin: 0">Option 2</label>
+              </div>
+              <div class="flex items-center gap-sm">
+                <input
+                  type="radio"
+                  id="option3"
+                  name="preference"
+                  class="form-radio"
+                />
+                <label for="option3" style="margin: 0">Option 3</label>
+              </div>
+            </div>
+          </div>
+
+          <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+      </section>
+
+      <!-- Cards Section -->
+      <section>
+        <h2>Cards</h2>
+        <div class="grid">
+          <div class="card grid-col">
+            <div class="card-header">
+              <h3 class="card-title">Card Title 1</h3>
+            </div>
+            <div class="card-body">
+              <p>
+                This is a card with a header, body, and footer. Cards are great
+                for organizing content into distinct sections.
+              </p>
+            </div>
+            <div class="card-footer">
+              <button class="btn btn-primary">Action</button>
+            </div>
+          </div>
+
+          <div class="card grid-col">
+            <div class="card-header">
+              <h3 class="card-title">Card Title 2</h3>
+            </div>
+            <div class="card-body">
+              <p>
+                Another card example showing how multiple cards can be
+                displayed using the grid layout system.
+              </p>
+            </div>
+            <div class="card-footer">
+              <button class="btn btn-secondary">Learn More</button>
+            </div>
+          </div>
+
+          <div class="card grid-col">
+            <div class="card-header">
+              <h3 class="card-title">Card Title 3</h3>
+            </div>
+            <div class="card-body">
+              <p>
+                Cards automatically adjust to available space using flexbox
+                layout with proper gap spacing.
+              </p>
+            </div>
+            <div class="card-footer">
+              <button class="btn btn-success">Get Started</button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Lists Section -->
+      <section>
+        <h2>Lists</h2>
+        <ul class="list">
+          <li class="list-item">
+            <strong>List Item 1</strong>
+            <p style="margin: 0">Description for the first item</p>
+          </li>
+          <li class="list-item">
+            <strong>List Item 2</strong>
+            <p style="margin: 0">Description for the second item</p>
+          </li>
+          <li class="list-item">
+            <strong>List Item 3</strong>
+            <p style="margin: 0">Description for the third item</p>
+          </li>
+          <li class="list-item">
+            <strong>List Item 4</strong>
+            <p style="margin: 0">Description for the fourth item</p>
+          </li>
+        </ul>
+      </section>
+
+      <!-- Badges Section -->
+      <section>
+        <h2>Badges</h2>
+        <div class="flex gap-md" style="flex-wrap: wrap">
+          <span class="badge">Default</span>
+          <span class="badge badge-primary">Primary</span>
+          <span class="badge badge-success">Success</span>
+          <span class="badge badge-danger">Danger</span>
+          <span class="badge badge-warning">Warning</span>
+        </div>
+      </section>
+
+      <!-- Alerts Section -->
+      <section>
+        <h2>Alerts</h2>
+        <div class="alert alert-info">
+          <strong>Info:</strong> This is an informational alert message.
+        </div>
+        <div class="alert alert-success">
+          <strong>Success:</strong> Your action was completed successfully!
+        </div>
+        <div class="alert alert-warning">
+          <strong>Warning:</strong> Please be careful with this action.
+        </div>
+        <div class="alert alert-danger">
+          <strong>Error:</strong> Something went wrong. Please try again.
+        </div>
+      </section>
+
+      <!-- Table Section -->
+      <section>
+        <h2>Table</h2>
+        <table class="table">
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Email</th>
+              <th>Role</th>
+              <th>Status</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>John Doe</td>
+              <td>john@example.com</td>
+              <td>Developer</td>
+              <td><span class="badge badge-success">Active</span></td>
+            </tr>
+            <tr>
+              <td>Jane Smith</td>
+              <td>jane@example.com</td>
+              <td>Designer</td>
+              <td><span class="badge badge-success">Active</span></td>
+            </tr>
+            <tr>
+              <td>Bob Johnson</td>
+              <td>bob@example.com</td>
+              <td>Manager</td>
+              <td><span class="badge badge-warning">Pending</span></td>
+            </tr>
+            <tr>
+              <td>Alice Williams</td>
+              <td>alice@example.com</td>
+              <td>Developer</td>
+              <td><span class="badge badge-danger">Inactive</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <!-- Navigation Section -->
+      <section>
+        <h2>Navigation Variants</h2>
+        <nav class="nav">
+          <a href="#" class="nav-link">Dashboard</a>
+          <a href="#" class="nav-link active">Projects</a>
+          <a href="#" class="nav-link">Team</a>
+          <a href="#" class="nav-link">Settings</a>
+        </nav>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="footer-content">
+        <div>
+          <p style="margin: 0">&copy; 2025 StyleGuide. All rights reserved.</p>
+        </div>
+        <nav class="footer-links">
+          <a href="#">Privacy</a>
+          <a href="#">Terms</a>
+          <a href="#">Contact</a>
+          <a href="#">Help</a>
+        </nav>
+      </div>
+    </footer>
+  </body>
+</html>

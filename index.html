@@ -8,7 +8,7 @@
   </head>
   <body>
     <header class="header">
-      <div class="header-logo">StyleGuide</div>
+      <div class="header-logo">Style Guide</div>
       <nav class="nav">
         <a href="#" class="nav-link active">Home</a>
         <a href="#" class="nav-link">Components</a>
@@ -19,26 +19,39 @@
 
     <main class="container">
       <section>
-        <h1>Typography</h1>
-        <h1>Heading 1</h1>
-        <h2>Heading 2</h2>
-        <h3>Heading 3</h3>
-        <h4>Heading 4</h4>
-        <h5>Heading 5</h5>
-        <h6>Heading 6</h6>
-        <p>
-          This is a paragraph with some <strong>bold text</strong> and some
-          <em>italic text</em>. You can also have
-          <a href="#">links within paragraphs</a> that look great.
-        </p>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua.
-        </p>
+        <h2>Alerts</h2>
+        <div class="alert alert-info">
+          <strong>Info:</strong> This is an informational alert message.
+        </div>
+        <div class="alert alert-success">
+          <strong>Success:</strong> Your action was completed successfully!
+        </div>
+        <div class="alert alert-warning">
+          <strong>Warning:</strong> Please be careful with this action.
+        </div>
+        <div class="alert alert-danger">
+          <strong>Error:</strong> Something went wrong. Please try again.
+        </div>
       </section>
+
+      <hr />
+
+      <section>
+        <h2>Badges</h2>
+        <div class="flex gap-md" style="flex-wrap: wrap">
+          <span class="badge">Default</span>
+          <span class="badge badge-primary">Primary</span>
+          <span class="badge badge-success">Success</span>
+          <span class="badge badge-danger">Danger</span>
+          <span class="badge badge-warning">Warning</span>
+        </div>
+      </section>
+
+      <hr />
 
       <section>
         <h2>Buttons</h2>
+        <h3>Variants</h3>
         <div class="flex gap-md" style="flex-wrap: wrap">
           <button class="button button-primary">Primary Button</button>
           <button class="button button-secondary">Secondary Button</button>
@@ -46,7 +59,67 @@
           <button class="button button-danger">Danger Button</button>
           <button class="button button-outline">Outline Button</button>
         </div>
+        <h3>Sizes</h3>
+        <div class="flex gap-md" style="align-items: center; flex-wrap: wrap">
+          <button class="button button-primary button-small">Small Button</button>
+          <button class="button button-primary">Medium Button</button>
+          <button class="button button-primary button-large">Large Button</button>
+        </div>
       </section>
+
+      <hr />
+
+      <section>
+        <h2>Cards</h2>
+        <div class="grid">
+          <div class="card grid-col">
+            <div class="card-header">
+              <h3 class="card-title">Card Title 1</h3>
+            </div>
+            <div class="card-body">
+              <p>
+                This is a card with a header, body, and footer. Cards are great
+                for organizing content into distinct sections.
+              </p>
+            </div>
+            <div class="card-footer">
+              <button class="button button-primary">Action</button>
+            </div>
+          </div>
+
+          <div class="card grid-col">
+            <div class="card-header">
+              <h3 class="card-title">Card Title 2</h3>
+            </div>
+            <div class="card-body">
+              <p>
+                Another card example showing how multiple cards can be
+                displayed using the grid layout system.
+              </p>
+            </div>
+            <div class="card-footer">
+              <button class="button button-secondary">Learn More</button>
+            </div>
+          </div>
+
+          <div class="card grid-col">
+            <div class="card-header">
+              <h3 class="card-title">Card Title 3</h3>
+            </div>
+            <div class="card-body">
+              <p>
+                Cards automatically adjust to available space using flexbox
+                layout with proper gap spacing.
+              </p>
+            </div>
+            <div class="card-footer">
+              <button class="button button-success">Get Started</button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <hr />
 
       <section>
         <h2>Forms</h2>
@@ -137,55 +210,7 @@
         </form>
       </section>
 
-      <section>
-        <h2>Cards</h2>
-        <div class="grid">
-          <div class="card grid-col">
-            <div class="card-header">
-              <h3 class="card-title">Card Title 1</h3>
-            </div>
-            <div class="card-body">
-              <p>
-                This is a card with a header, body, and footer. Cards are great
-                for organizing content into distinct sections.
-              </p>
-            </div>
-            <div class="card-footer">
-              <button class="button button-primary">Action</button>
-            </div>
-          </div>
-
-          <div class="card grid-col">
-            <div class="card-header">
-              <h3 class="card-title">Card Title 2</h3>
-            </div>
-            <div class="card-body">
-              <p>
-                Another card example showing how multiple cards can be
-                displayed using the grid layout system.
-              </p>
-            </div>
-            <div class="card-footer">
-              <button class="button button-secondary">Learn More</button>
-            </div>
-          </div>
-
-          <div class="card grid-col">
-            <div class="card-header">
-              <h3 class="card-title">Card Title 3</h3>
-            </div>
-            <div class="card-body">
-              <p>
-                Cards automatically adjust to available space using flexbox
-                layout with proper gap spacing.
-              </p>
-            </div>
-            <div class="card-footer">
-              <button class="button button-success">Get Started</button>
-            </div>
-          </div>
-        </div>
-      </section>
+      <hr />
 
       <section>
         <h2>Lists</h2>
@@ -209,72 +234,7 @@
         </ul>
       </section>
 
-      <section>
-        <h2>Badges</h2>
-        <div class="flex gap-md" style="flex-wrap: wrap">
-          <span class="badge">Default</span>
-          <span class="badge badge-primary">Primary</span>
-          <span class="badge badge-success">Success</span>
-          <span class="badge badge-danger">Danger</span>
-          <span class="badge badge-warning">Warning</span>
-        </div>
-      </section>
-
-      <section>
-        <h2>Alerts</h2>
-        <div class="alert alert-info">
-          <strong>Info:</strong> This is an informational alert message.
-        </div>
-        <div class="alert alert-success">
-          <strong>Success:</strong> Your action was completed successfully!
-        </div>
-        <div class="alert alert-warning">
-          <strong>Warning:</strong> Please be careful with this action.
-        </div>
-        <div class="alert alert-danger">
-          <strong>Error:</strong> Something went wrong. Please try again.
-        </div>
-      </section>
-
-      <section>
-        <h2>Table</h2>
-        <table class="table">
-          <thead>
-            <tr>
-              <th>Name</th>
-              <th>Email</th>
-              <th>Role</th>
-              <th>Status</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>John Doe</td>
-              <td>john@example.com</td>
-              <td>Developer</td>
-              <td><span class="badge badge-success">Active</span></td>
-            </tr>
-            <tr>
-              <td>Jane Smith</td>
-              <td>jane@example.com</td>
-              <td>Designer</td>
-              <td><span class="badge badge-success">Active</span></td>
-            </tr>
-            <tr>
-              <td>Bob Johnson</td>
-              <td>bob@example.com</td>
-              <td>Manager</td>
-              <td><span class="badge badge-warning">Pending</span></td>
-            </tr>
-            <tr>
-              <td>Alice Williams</td>
-              <td>alice@example.com</td>
-              <td>Developer</td>
-              <td><span class="badge badge-danger">Inactive</span></td>
-            </tr>
-          </tbody>
-        </table>
-      </section>
+      <hr />
 
       <section>
         <h2>Navigation Variants</h2>
@@ -285,12 +245,75 @@
           <a href="#" class="nav-link">Settings</a>
         </nav>
       </section>
+
+      <hr />
+
+      <section>
+        <h2>Table</h2>
+        <table class="table">
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Email</th>
+              <th>Role</th>
+              <th style="text-align: center">Status</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>John Doe</td>
+              <td>john@example.com</td>
+              <td>Developer</td>
+              <td style="text-align: center"><span class="badge badge-success">Active</span></td>
+            </tr>
+            <tr>
+              <td>Jane Smith</td>
+              <td>jane@example.com</td>
+              <td>Designer</td>
+              <td style="text-align: center"><span class="badge badge-success">Active</span></td>
+            </tr>
+            <tr>
+              <td>Bob Johnson</td>
+              <td>bob@example.com</td>
+              <td>Manager</td>
+              <td style="text-align: center"><span class="badge badge-warning">Pending</span></td>
+            </tr>
+            <tr>
+              <td>Alice Williams</td>
+              <td>alice@example.com</td>
+              <td>Developer</td>
+              <td style="text-align: center"><span class="badge badge-danger">Inactive</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <hr />
+
+      <section>
+        <h2>Typography</h2>
+        <h1>Heading 1</h1>
+        <h2>Heading 2</h2>
+        <h3>Heading 3</h3>
+        <h4>Heading 4</h4>
+        <h5>Heading 5</h5>
+        <h6>Heading 6</h6>
+        <p>
+          This is a paragraph with some <strong>bold text</strong> and some
+          <em>italic text</em>. You can also have
+          <a href="#">links within paragraphs</a> that look great.
+        </p>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        </p>
+      </section>
     </main>
 
     <footer class="footer">
       <div class="footer-content">
         <div>
-          <p style="margin: 0">&copy; 2025 StyleGuide. All rights reserved.</p>
+          <p style="margin: 0">&copy; 2025 Style Guide. All rights reserved.</p>
         </div>
         <nav class="footer-links">
           <a href="#">Privacy</a>

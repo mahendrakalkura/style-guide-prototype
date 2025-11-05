@@ -182,6 +182,16 @@ a:hover {
   color: white;
 }
 
+.button-small {
+  font-size: var(--font-size-sm);
+  padding: var(--spacing-xs) var(--spacing-sm);
+}
+
+.button-large {
+  font-size: var(--font-size-lg);
+  padding: var(--spacing-md) var(--spacing-xl);
+}
+
 .form-group {
   display: flex;
   flex-direction: column;

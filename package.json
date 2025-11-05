@@ -3,14 +3,18 @@
   "version": "1.0.0",
   "description": "A style guide prototype with common UI components",
   "scripts": {
+    "format": "prettier --write *.html && biome check --write --files-ignore-unknown=true *.css",
     "lint": "./lint.sh",
-    "lint:html": "prettier --check *.html",
     "lint:css": "biome check --files-ignore-unknown=true *.css",
-    "format": "prettier --write *.html && biome check --write --files-ignore-unknown=true *.css"
+    "lint:html": "prettier --check *.html"
+  },
+  "dependencies": {
+    "normalize.css": "^8.0.1"
   },
   "devDependencies": {
     "@biomejs/biome": "^1.9.4",
-    "prettier": "^3.3.3"
+    "prettier": "^3.4.2",
+    "prettier-plugin-sort-attributes": "^1.0.0"
   },
   "license": "MIT"
 }

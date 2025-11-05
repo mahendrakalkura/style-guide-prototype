@@ -3,7 +3,6 @@
   "bracketSpacing": true,
   "endOfLine": "lf",
   "htmlWhitespaceSensitivity": "css",
-  "plugins": ["prettier-plugin-sort-attributes"],
   "printWidth": 120,
   "quoteProps": "as-needed",
   "semi": true,

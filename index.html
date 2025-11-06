@@ -36,6 +36,10 @@
     <main class="container">
       <section>
         <h2>Alerts <span class="status-badge status-stable">Stable</span></h2>
+        <div class="alert alert-info">
+          <strong>Keyboard Shortcuts:</strong> Press <kbd>T</kbd> to toggle Table of Contents, <kbd>/</kbd> to focus
+          search, <kbd>Esc</kbd> to close modals/dropdowns
+        </div>
         <div class="alert alert-info"><strong>Info:</strong> This is an informational alert message.</div>
         <div class="alert alert-success"><strong>Success:</strong> Your action was completed successfully!</div>
         <div class="alert alert-warning"><strong>Warning:</strong> Please be careful with this action.</div>
@@ -48,7 +52,7 @@
         <h2>Accordion <span class="status-badge status-stable">Stable</span></h2>
         <div class="accordion">
           <div class="accordion-item">
-            <button class="accordion-header">
+            <button class="accordion-trigger">
               What is a style guide?
               <span class="accordion-icon">▼</span>
             </button>
@@ -60,7 +64,7 @@
             </div>
           </div>
           <div class="accordion-item">
-            <button class="accordion-header">
+            <button class="accordion-trigger">
               How do I use these components?
               <span class="accordion-icon">▼</span>
             </button>
@@ -72,7 +76,7 @@
             </div>
           </div>
           <div class="accordion-item">
-            <button class="accordion-header">
+            <button class="accordion-trigger">
               Can I customize the colors?
               <span class="accordion-icon">▼</span>
             </button>
@@ -417,9 +421,9 @@ console.log(message);</code></pre>
 
       <section>
         <h2>Dropdown Menu <span class="status-badge status-stable">Stable</span></h2>
-        <div style="position: relative; display: inline-block">
-          <button class="button button-primary" id="dropdown-trigger">Open Menu ▼</button>
-          <div class="dropdown-menu" id="dropdown-menu" style="display: none">
+        <div class="dropdown" style="display: inline-block">
+          <button class="button button-primary dropdown-trigger">Open Menu ▼</button>
+          <div class="dropdown-menu">
             <a href="#" class="dropdown-item">Profile</a>
             <a href="#" class="dropdown-item">Settings</a>
             <a href="#" class="dropdown-item">Billing</a>
@@ -540,8 +544,8 @@ console.log(message);</code></pre>
 
       <section>
         <h2>Modal <span class="status-badge status-stable">Stable</span></h2>
-        <button class="button button-primary" id="modal-trigger">Open Modal</button>
-        <div class="modal" id="example-modal" style="display: none">
+        <button class="button button-primary" data-modal-trigger="example-modal">Open Modal</button>
+        <div class="modal" id="example-modal">
           <div class="modal-backdrop"></div>
           <div class="modal-content">
             <div class="modal-header">

@@ -10,27 +10,33 @@ document.addEventListener("DOMContentLoaded", () => {
   initChipRemoval();
 });
 
-function initTabs() {
+const initTabs = () => {
   document.querySelectorAll(".tabs").forEach((tabContainer) => {
     const tabItems = tabContainer.querySelectorAll(".tabs-item");
     const tabsContent = tabContainer.nextElementSibling;
-    if (!tabsContent || !tabsContent.classList.contains("tabs-content")) return;
+    if (!tabsContent || !tabsContent.classList.contains("tabs-content")) {
+      return;
+    }
 
     const tabPanels = tabsContent.querySelectorAll(".tabs-panel");
 
     tabItems.forEach((item, index) => {
       item.addEventListener("click", () => {
-        tabItems.forEach((tab) => tab.classList.remove("active"));
-        tabPanels.forEach((panel) => panel.classList.remove("active"));
+        tabItems.forEach((tab) => {
+          tab.classList.remove("active");
+        });
+        tabPanels.forEach((panel) => {
+          panel.classList.remove("active");
+        });
 
         item.classList.add("active");
         tabPanels[index].classList.add("active");
       });
     });
   });
-}
+};
 
-function initTableOfContents() {
+const initTableOfContents = () => {
   const tocContainer = document.createElement("aside");
   tocContainer.className = "table-of-contents";
   tocContainer.innerHTML = '<h3 class="table-of-contents-title">Contents</h3><ul class="table-of-contents-list"></ul>';
@@ -40,7 +46,9 @@ function initTableOfContents() {
 
   sections.forEach((section, index) => {
     const heading = section.querySelector("h2");
-    if (!heading) return;
+    if (!heading) {
+      return;
+    }
 
     const id = `section-${index}`;
     section.id = id;
@@ -79,11 +87,13 @@ function initTableOfContents() {
       }
     });
   });
-}
+};
 
-function initKeyboardShortcuts() {
+const initKeyboardShortcuts = () => {
   document.addEventListener("keydown", (e) => {
-    if (e.target.matches("input, textarea, select")) return;
+    if (e.target.matches("input, textarea, select")) {
+      return;
+    }
 
     switch (e.key.toLowerCase()) {
       case "t":
@@ -102,9 +112,9 @@ function initKeyboardShortcuts() {
         break;
     }
   });
-}
+};
 
-function initModals() {
+const initModals = () => {
   document.querySelectorAll("[data-modal-trigger]").forEach((trigger) => {
     trigger.addEventListener("click", () => {
       const modalId = trigger.getAttribute("data-modal-trigger");
@@ -123,16 +133,16 @@ function initModals() {
       }
     });
   });
-}
+};
 
-function closeAllModals() {
+const closeAllModals = () => {
   document.querySelectorAll(".modal.active").forEach((modal) => {
     modal.classList.remove("active");
   });
   document.body.style.overflow = "";
-}
+};
 
-function initDropdowns() {
+const initDropdowns = () => {
   document.querySelectorAll(".dropdown-trigger").forEach((trigger) => {
     trigger.addEventListener("click", (e) => {
       e.stopPropagation();
@@ -151,17 +161,17 @@ function initDropdowns() {
   document.addEventListener("click", () => {
     closeAllDropdowns();
   });
-}
+};
 
-function closeAllDropdowns() {
+const closeAllDropdowns = () => {
   document.querySelectorAll(".dropdown-menu.active").forEach((menu) => {
     menu.classList.remove("active");
   });
-}
+};
 
 let toastCounter = 0;
 
-function initToasts() {
+const initToasts = () => {
   window.showToast = (message, type = "info", duration = 3000) => {
     const toastContainer =
       document.querySelector(".toast-container") || createToastContainer();
@@ -175,19 +185,21 @@ function initToasts() {
 
     setTimeout(() => {
       toast.style.animation = "slideOutRight 0.3s ease";
-      setTimeout(() => toast.remove(), 300);
+      setTimeout(() => {
+        return toast.remove();
+      }, 300);
     }, duration);
   };
-}
+};
 
-function createToastContainer() {
+const createToastContainer = () => {
   const container = document.createElement("div");
   container.className = "toast-container";
   document.body.appendChild(container);
   return container;
-}
+};
 
-function initAccordions() {
+const initAccordions = () => {
   document.querySelectorAll(".accordion-trigger").forEach((trigger) => {
     trigger.addEventListener("click", () => {
       const item = trigger.closest(".accordion-item");
@@ -213,9 +225,9 @@ function initAccordions() {
       }
     });
   });
-}
+};
 
-function initSidebarToggle() {
+const initSidebarToggle = () => {
   const toggleBtn = document.querySelector(".sidebar-toggle");
   const sidebar = document.querySelector(".sidebar-navigation");
 
@@ -224,20 +236,22 @@ function initSidebarToggle() {
       sidebar.classList.toggle("collapsed");
     });
   }
-}
+};
 
-function initChipRemoval() {
+const initChipRemoval = () => {
   document.querySelectorAll(".chip-remove").forEach((button) => {
     button.addEventListener("click", (e) => {
       e.stopPropagation();
       const chip = button.closest(".chip");
       if (chip) {
         chip.style.animation = "fadeOut 0.2s ease";
-        setTimeout(() => chip.remove(), 200);
+        setTimeout(() => {
+          return chip.remove();
+        }, 200);
       }
     });
   });
-}
+};
 
 if (typeof window !== "undefined") {
   window.addEventListener("load", () => {

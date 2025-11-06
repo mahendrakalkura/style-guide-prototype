@@ -3,7 +3,23 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="A comprehensive style guide prototype showcasing common UI components and design patterns"
+    />
+    <meta name="keywords" content="style guide, UI components, design system, CSS, web design, component library" />
+    <meta name="author" content="Style Guide Prototype" />
+    <meta property="og:title" content="Style Guide Prototype" />
+    <meta
+      property="og:description"
+      content="A comprehensive style guide prototype showcasing common UI components and design patterns"
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://style-guide-prototype.netlify.app" />
+    <meta property="og:image" content="https://style-guide-prototype.netlify.app/favicon.svg" />
     <title>Style Guide Prototype</title>
+    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+    <link rel="manifest" href="manifest.json" />
     <link rel="stylesheet" href="index.css" />
   </head>
   <body>
@@ -19,25 +35,61 @@
 
     <main class="container">
       <section>
-        <h2>Alerts</h2>
-        <div class="alert alert-info">
-          <strong>Info:</strong> This is an informational alert message.
-        </div>
-        <div class="alert alert-success">
-          <strong>Success:</strong> Your action was completed successfully!
-        </div>
-        <div class="alert alert-warning">
-          <strong>Warning:</strong> Please be careful with this action.
-        </div>
-        <div class="alert alert-danger">
-          <strong>Error:</strong> Something went wrong. Please try again.
+        <h2>Alerts <span class="status-badge status-stable">Stable</span></h2>
+        <div class="alert alert-info"><strong>Info:</strong> This is an informational alert message.</div>
+        <div class="alert alert-success"><strong>Success:</strong> Your action was completed successfully!</div>
+        <div class="alert alert-warning"><strong>Warning:</strong> Please be careful with this action.</div>
+        <div class="alert alert-danger"><strong>Error:</strong> Something went wrong. Please try again.</div>
+      </section>
+
+      <hr />
+
+      <section>
+        <h2>Accordion <span class="status-badge status-stable">Stable</span></h2>
+        <div class="accordion">
+          <div class="accordion-item">
+            <button class="accordion-header">
+              What is a style guide?
+              <span class="accordion-icon">▼</span>
+            </button>
+            <div class="accordion-content">
+              <p>
+                A style guide is a comprehensive reference document that defines the visual and interactive elements of
+                a design system. It ensures consistency across products and teams.
+              </p>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <button class="accordion-header">
+              How do I use these components?
+              <span class="accordion-icon">▼</span>
+            </button>
+            <div class="accordion-content">
+              <p>
+                Simply copy the HTML structure and apply the corresponding CSS classes. All components follow consistent
+                naming conventions and use CSS variables for theming.
+              </p>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <button class="accordion-header">
+              Can I customize the colors?
+              <span class="accordion-icon">▼</span>
+            </button>
+            <div class="accordion-content">
+              <p>
+                Yes! All colors are defined as CSS variables in the :root selector. You can easily customize them by
+                overriding these variables in your own stylesheet.
+              </p>
+            </div>
+          </div>
         </div>
       </section>
 
       <hr />
 
       <section>
-        <h2>Avatars</h2>
+        <h2>Avatars <span class="status-badge status-stable">Stable</span></h2>
         <h3>Sizes</h3>
         <div class="flex gap-md" style="align-items: center; flex-wrap: wrap">
           <div class="avatar avatar-small">JD</div>
@@ -61,7 +113,7 @@
       <hr />
 
       <section>
-        <h2>Badges</h2>
+        <h2>Badges <span class="status-badge status-stable">Stable</span></h2>
         <div class="flex gap-md" style="flex-wrap: wrap">
           <span class="badge">Default</span>
           <span class="badge badge-primary">Primary</span>
@@ -74,21 +126,20 @@
       <hr />
 
       <section>
-        <h2>Blockquotes</h2>
+        <h2>Blockquotes <span class="status-badge status-stable">Stable</span></h2>
         <blockquote>
-          "The only way to do great work is to love what you do. If you haven't found it yet, keep looking. Don't settle."
-          — Steve Jobs
+          "The only way to do great work is to love what you do. If you haven't found it yet, keep looking. Don't
+          settle." — Steve Jobs
         </blockquote>
         <blockquote>
-          "Design is not just what it looks like and feels like. Design is how it works."
-          — Steve Jobs
+          "Design is not just what it looks like and feels like. Design is how it works." — Steve Jobs
         </blockquote>
       </section>
 
       <hr />
 
       <section>
-        <h2>Breadcrumbs</h2>
+        <h2>Breadcrumbs <span class="status-badge status-stable">Stable</span></h2>
         <ul class="breadcrumb">
           <li class="breadcrumb-item"><a href="#">Home</a></li>
           <li class="breadcrumb-item"><a href="#">Products</a></li>
@@ -100,7 +151,7 @@
       <hr />
 
       <section>
-        <h2>Buttons</h2>
+        <h2>Buttons <span class="status-badge status-stable">Stable</span></h2>
         <h3>Variants</h3>
         <div class="flex gap-md" style="flex-wrap: wrap">
           <button class="button button-primary">Primary Button</button>
@@ -120,7 +171,7 @@
       <hr />
 
       <section>
-        <h2>Cards</h2>
+        <h2>Cards <span class="status-badge status-stable">Stable</span></h2>
         <div class="grid">
           <div class="card grid-col">
             <div class="card-header">
@@ -128,8 +179,8 @@
             </div>
             <div class="card-body">
               <p>
-                This is a card with a header, body, and footer. Cards are great
-                for organizing content into distinct sections.
+                This is a card with a header, body, and footer. Cards are great for organizing content into distinct
+                sections.
               </p>
             </div>
             <div class="card-footer">
@@ -142,10 +193,7 @@
               <h3 class="card-title">Card Title 2</h3>
             </div>
             <div class="card-body">
-              <p>
-                Another card example showing how multiple cards can be
-                displayed using the grid layout system.
-              </p>
+              <p>Another card example showing how multiple cards can be displayed using the grid layout system.</p>
             </div>
             <div class="card-footer">
               <button class="button button-secondary">Learn More</button>
@@ -157,10 +205,7 @@
               <h3 class="card-title">Card Title 3</h3>
             </div>
             <div class="card-body">
-              <p>
-                Cards automatically adjust to available space using flexbox
-                layout with proper gap spacing.
-              </p>
+              <p>Cards automatically adjust to available space using flexbox layout with proper gap spacing.</p>
             </div>
             <div class="card-footer">
               <button class="button button-success">Get Started</button>
@@ -172,7 +217,7 @@
       <hr />
 
       <section>
-        <h2>Chips</h2>
+        <h2>Chips <span class="status-badge status-stable">Stable</span></h2>
         <div class="flex gap-md" style="flex-wrap: wrap">
           <div class="chip">
             JavaScript
@@ -196,7 +241,7 @@
       <hr />
 
       <section>
-        <h2>Code Blocks</h2>
+        <h2>Code Blocks <span class="status-badge status-stable">Stable</span></h2>
         <h3>Inline Code</h3>
         <p>Use the <code>console.log()</code> function to debug your JavaScript code.</p>
         <p>The <code>useState</code> hook is essential in React development.</p>
@@ -212,13 +257,186 @@ console.log(message);</code></pre>
       <hr />
 
       <section>
-        <h2>Empty State</h2>
+        <h2>Color Palette <span class="status-badge status-stable">Stable</span></h2>
+        <h3>Primary Colors</h3>
+        <div class="grid" style="margin-bottom: var(--spacing-lg)">
+          <div class="card grid-col">
+            <div
+              style="background-color: var(--color-primary); height: 100px; border-radius: var(--border-radius)"
+            ></div>
+            <div class="card-body">
+              <h4>Primary</h4>
+              <code>#3b82f6</code>
+            </div>
+          </div>
+          <div class="card grid-col">
+            <div
+              style="background-color: var(--color-secondary); height: 100px; border-radius: var(--border-radius)"
+            ></div>
+            <div class="card-body">
+              <h4>Secondary</h4>
+              <code>#6b7280</code>
+            </div>
+          </div>
+        </div>
+        <h3>Status Colors</h3>
+        <div class="grid">
+          <div class="card grid-col">
+            <div
+              style="background-color: var(--color-success); height: 100px; border-radius: var(--border-radius)"
+            ></div>
+            <div class="card-body">
+              <h4>Success</h4>
+              <code>#10b981</code>
+            </div>
+          </div>
+          <div class="card grid-col">
+            <div
+              style="background-color: var(--color-danger); height: 100px; border-radius: var(--border-radius)"
+            ></div>
+            <div class="card-body">
+              <h4>Danger</h4>
+              <code>#ef4444</code>
+            </div>
+          </div>
+          <div class="card grid-col">
+            <div
+              style="background-color: var(--color-warning); height: 100px; border-radius: var(--border-radius)"
+            ></div>
+            <div class="card-body">
+              <h4>Warning</h4>
+              <code>#f59e0b</code>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <hr />
+
+      <section>
+        <h2>Date Picker <span class="status-badge status-beta">Beta</span></h2>
+        <div class="date-picker">
+          <div class="date-picker-header">
+            <button class="date-picker-nav">‹</button>
+            <span class="date-picker-title">January 2025</span>
+            <button class="date-picker-nav">›</button>
+          </div>
+          <div class="date-picker-days">
+            <div class="date-picker-day day-header">Sun</div>
+            <div class="date-picker-day day-header">Mon</div>
+            <div class="date-picker-day day-header">Tue</div>
+            <div class="date-picker-day day-header">Wed</div>
+            <div class="date-picker-day day-header">Thu</div>
+            <div class="date-picker-day day-header">Fri</div>
+            <div class="date-picker-day day-header">Sat</div>
+            <div class="date-picker-day disabled">29</div>
+            <div class="date-picker-day disabled">30</div>
+            <div class="date-picker-day disabled">31</div>
+            <div class="date-picker-day">1</div>
+            <div class="date-picker-day">2</div>
+            <div class="date-picker-day">3</div>
+            <div class="date-picker-day">4</div>
+            <div class="date-picker-day">5</div>
+            <div class="date-picker-day selected">6</div>
+            <div class="date-picker-day">7</div>
+            <div class="date-picker-day">8</div>
+            <div class="date-picker-day">9</div>
+            <div class="date-picker-day">10</div>
+            <div class="date-picker-day">11</div>
+            <div class="date-picker-day">12</div>
+            <div class="date-picker-day">13</div>
+            <div class="date-picker-day">14</div>
+            <div class="date-picker-day today">15</div>
+            <div class="date-picker-day">16</div>
+            <div class="date-picker-day">17</div>
+            <div class="date-picker-day">18</div>
+            <div class="date-picker-day">19</div>
+            <div class="date-picker-day">20</div>
+            <div class="date-picker-day">21</div>
+            <div class="date-picker-day">22</div>
+            <div class="date-picker-day">23</div>
+            <div class="date-picker-day">24</div>
+            <div class="date-picker-day">25</div>
+            <div class="date-picker-day">26</div>
+            <div class="date-picker-day">27</div>
+            <div class="date-picker-day">28</div>
+            <div class="date-picker-day">29</div>
+            <div class="date-picker-day">30</div>
+            <div class="date-picker-day">31</div>
+          </div>
+        </div>
+      </section>
+
+      <hr />
+
+      <section>
+        <h2>Design Tokens <span class="status-badge status-stable">Stable</span></h2>
+        <h3>Font Sizes</h3>
+        <div class="grid" style="margin-bottom: var(--spacing-lg)">
+          <div class="card grid-col">
+            <div class="card-body">
+              <p style="font-size: var(--font-size-small)">Small: 0.875rem</p>
+              <code>var(--font-size-small)</code>
+            </div>
+          </div>
+          <div class="card grid-col">
+            <div class="card-body">
+              <p style="font-size: var(--font-size-base)">Base: 1rem</p>
+              <code>var(--font-size-base)</code>
+            </div>
+          </div>
+          <div class="card grid-col">
+            <div class="card-body">
+              <p style="font-size: var(--font-size-large)">Large: 1.125rem</p>
+              <code>var(--font-size-large)</code>
+            </div>
+          </div>
+        </div>
+        <h3>Border Radius</h3>
+        <div class="flex gap-md" style="flex-wrap: wrap">
+          <div class="card" style="width: 150px">
+            <div
+              style="background-color: var(--color-primary); height: 80px; border-radius: var(--border-radius)"
+            ></div>
+            <div class="card-body">
+              <code>0.375rem</code>
+            </div>
+          </div>
+          <div class="card" style="width: 150px">
+            <div
+              style="background-color: var(--color-primary); height: 80px; border-radius: var(--border-radius-large)"
+            ></div>
+            <div class="card-body">
+              <code>0.5rem</code>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <hr />
+
+      <section>
+        <h2>Dropdown Menu <span class="status-badge status-stable">Stable</span></h2>
+        <div style="position: relative; display: inline-block">
+          <button class="button button-primary" id="dropdown-trigger">Open Menu ▼</button>
+          <div class="dropdown-menu" id="dropdown-menu" style="display: none">
+            <a href="#" class="dropdown-item">Profile</a>
+            <a href="#" class="dropdown-item">Settings</a>
+            <a href="#" class="dropdown-item">Billing</a>
+            <div class="dropdown-divider"></div>
+            <a href="#" class="dropdown-item">Logout</a>
+          </div>
+        </div>
+      </section>
+
+      <hr />
+
+      <section>
+        <h2>Empty State <span class="status-badge status-stable">Stable</span></h2>
         <div class="empty-state">
           <div class="empty-state-icon">📭</div>
           <h3 class="empty-state-title">No items found</h3>
-          <p class="empty-state-description">
-            Try adjusting your search or filter to find what you're looking for.
-          </p>
+          <p class="empty-state-description">Try adjusting your search or filter to find what you're looking for.</p>
           <button class="button button-primary">Create New Item</button>
         </div>
       </section>
@@ -226,26 +444,16 @@ console.log(message);</code></pre>
       <hr />
 
       <section>
-        <h2>Forms</h2>
+        <h2>Forms <span class="status-badge status-stable">Stable</span></h2>
         <form>
           <div class="form-group">
             <label for="name" class="form-label">Name</label>
-            <input
-              type="text"
-              id="name"
-              class="form-input"
-              placeholder="Enter your name"
-            />
+            <input type="text" id="name" class="form-input" placeholder="Enter your name" />
           </div>
 
           <div class="form-group">
             <label for="email" class="form-label">Email</label>
-            <input
-              type="email"
-              id="email"
-              class="form-input"
-              placeholder="Enter your email"
-            />
+            <input type="email" id="email" class="form-input" placeholder="Enter your email" />
           </div>
 
           <div class="form-group">
@@ -261,19 +469,13 @@ console.log(message);</code></pre>
 
           <div class="form-group">
             <label for="message" class="form-label">Message</label>
-            <textarea
-              id="message"
-              class="form-textarea"
-              placeholder="Enter your message"
-            ></textarea>
+            <textarea id="message" class="form-textarea" placeholder="Enter your message"></textarea>
           </div>
 
           <div class="form-group">
             <div class="flex items-center gap-sm">
               <input type="checkbox" id="subscribe" class="form-checkbox" />
-              <label for="subscribe" class="form-label" style="margin: 0"
-                >Subscribe to newsletter</label
-              >
+              <label for="subscribe" class="form-label" style="margin: 0">Subscribe to newsletter</label>
             </div>
           </div>
 
@@ -281,30 +483,15 @@ console.log(message);</code></pre>
             <label class="form-label">Preferences</label>
             <div class="flex flex-col gap-sm">
               <div class="flex items-center gap-sm">
-                <input
-                  type="radio"
-                  id="option1"
-                  name="preference"
-                  class="form-radio"
-                />
+                <input type="radio" id="option1" name="preference" class="form-radio" />
                 <label for="option1" style="margin: 0">Option 1</label>
               </div>
               <div class="flex items-center gap-sm">
-                <input
-                  type="radio"
-                  id="option2"
-                  name="preference"
-                  class="form-radio"
-                />
+                <input type="radio" id="option2" name="preference" class="form-radio" />
                 <label for="option2" style="margin: 0">Option 2</label>
               </div>
               <div class="flex items-center gap-sm">
-                <input
-                  type="radio"
-                  id="option3"
-                  name="preference"
-                  class="form-radio"
-                />
+                <input type="radio" id="option3" name="preference" class="form-radio" />
                 <label for="option3" style="margin: 0">Option 3</label>
               </div>
             </div>
@@ -317,7 +504,7 @@ console.log(message);</code></pre>
       <hr />
 
       <section>
-        <h2>Lists</h2>
+        <h2>Lists <span class="status-badge status-stable">Stable</span></h2>
         <ul class="list">
           <li class="list-item">
             <strong>List Item 1</strong>
@@ -341,7 +528,7 @@ console.log(message);</code></pre>
       <hr />
 
       <section>
-        <h2>Loading Spinners</h2>
+        <h2>Loading Spinners <span class="status-badge status-stable">Stable</span></h2>
         <div class="flex gap-md" style="align-items: center; flex-wrap: wrap">
           <div class="loading-spinner loading-spinner-small"></div>
           <div class="loading-spinner"></div>
@@ -352,7 +539,34 @@ console.log(message);</code></pre>
       <hr />
 
       <section>
-        <h2>Navigation Variants</h2>
+        <h2>Modal <span class="status-badge status-stable">Stable</span></h2>
+        <button class="button button-primary" id="modal-trigger">Open Modal</button>
+        <div class="modal" id="example-modal" style="display: none">
+          <div class="modal-backdrop"></div>
+          <div class="modal-content">
+            <div class="modal-header">
+              <h3 class="modal-title">Modal Title</h3>
+              <button class="modal-close" aria-label="Close">×</button>
+            </div>
+            <div class="modal-body">
+              <p>
+                This is a modal dialog. It can contain any content you want, including forms, images, or other
+                components.
+              </p>
+              <p>Press the Escape key or click the X button to close this modal.</p>
+            </div>
+            <div class="modal-footer">
+              <button class="button button-secondary modal-close">Cancel</button>
+              <button class="button button-primary">Confirm</button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <hr />
+
+      <section>
+        <h2>Navigation Variants <span class="status-badge status-stable">Stable</span></h2>
         <nav class="nav">
           <a href="#" class="nav-link">Dashboard</a>
           <a href="#" class="nav-link active">Projects</a>
@@ -364,7 +578,7 @@ console.log(message);</code></pre>
       <hr />
 
       <section>
-        <h2>Pagination</h2>
+        <h2>Pagination <span class="status-badge status-stable">Stable</span></h2>
         <ul class="pagination">
           <li class="pagination-item disabled">‹</li>
           <li class="pagination-item active">1</li>
@@ -379,7 +593,7 @@ console.log(message);</code></pre>
       <hr />
 
       <section>
-        <h2>Progress Bars</h2>
+        <h2>Progress Bars <span class="status-badge status-stable">Stable</span></h2>
         <h3>Default</h3>
         <div class="progress">
           <div class="progress-bar" style="width: 60%"></div>
@@ -401,7 +615,38 @@ console.log(message);</code></pre>
       <hr />
 
       <section>
-        <h2>Search Input</h2>
+        <h2>Rich Text Editor <span class="status-badge status-beta">Beta</span></h2>
+        <div class="rte">
+          <h1>Rich Text Heading 1</h1>
+          <h2>Rich Text Heading 2</h2>
+          <h3>Rich Text Heading 3</h3>
+          <p>
+            This is a paragraph with <strong>bold text</strong>, <em>italic text</em>, and <a href="#">links</a>. The
+            rich text editor styling ensures consistent formatting for all text content.
+          </p>
+          <ul>
+            <li>Unordered list item 1</li>
+            <li>Unordered list item 2</li>
+            <li>Unordered list item 3</li>
+          </ul>
+          <ol>
+            <li>Ordered list item 1</li>
+            <li>Ordered list item 2</li>
+            <li>Ordered list item 3</li>
+          </ol>
+          <blockquote>
+            This is a blockquote within the rich text editor. It stands out from regular paragraphs.
+          </blockquote>
+          <pre><code>function example() {
+  return "Code blocks are also supported";
+}</code></pre>
+        </div>
+      </section>
+
+      <hr />
+
+      <section>
+        <h2>Search Input <span class="status-badge status-stable">Stable</span></h2>
         <div class="search-input">
           <input type="search" placeholder="Search for anything..." />
         </div>
@@ -410,7 +655,7 @@ console.log(message);</code></pre>
       <hr />
 
       <section>
-        <h2>Skeleton Loaders</h2>
+        <h2>Skeleton Loaders <span class="status-badge status-stable">Stable</span></h2>
         <div class="flex gap-lg" style="flex-wrap: wrap">
           <div>
             <div class="skeleton skeleton-title"></div>
@@ -426,7 +671,94 @@ console.log(message);</code></pre>
       <hr />
 
       <section>
-        <h2>Steppers</h2>
+        <h2>Sidebar Navigation <span class="status-badge status-stable">Stable</span></h2>
+        <div class="sidebar-navigation">
+          <div class="sidebar-header">
+            <h3>Navigation</h3>
+          </div>
+          <nav class="sidebar-menu">
+            <a href="#" class="sidebar-item active">
+              <span>🏠</span>
+              Dashboard
+            </a>
+            <a href="#" class="sidebar-item">
+              <span>📊</span>
+              Analytics
+            </a>
+            <a href="#" class="sidebar-item">
+              <span>👥</span>
+              Users
+            </a>
+            <a href="#" class="sidebar-item">
+              <span>⚙️</span>
+              Settings
+            </a>
+            <a href="#" class="sidebar-item">
+              <span>📁</span>
+              Files
+            </a>
+            <a href="#" class="sidebar-item">
+              <span>💬</span>
+              Messages
+            </a>
+          </nav>
+        </div>
+      </section>
+
+      <hr />
+
+      <section>
+        <h2>Spacing Scale <span class="status-badge status-stable">Stable</span></h2>
+        <div class="grid">
+          <div class="card grid-col">
+            <div style="background-color: var(--color-primary); height: var(--spacing-xs)"></div>
+            <div class="card-body">
+              <h4>Extra Small</h4>
+              <code>0.25rem (4px)</code>
+            </div>
+          </div>
+          <div class="card grid-col">
+            <div style="background-color: var(--color-primary); height: var(--spacing-sm)"></div>
+            <div class="card-body">
+              <h4>Small</h4>
+              <code>0.5rem (8px)</code>
+            </div>
+          </div>
+          <div class="card grid-col">
+            <div style="background-color: var(--color-primary); height: var(--spacing-md)"></div>
+            <div class="card-body">
+              <h4>Medium</h4>
+              <code>1rem (16px)</code>
+            </div>
+          </div>
+          <div class="card grid-col">
+            <div style="background-color: var(--color-primary); height: var(--spacing-lg)"></div>
+            <div class="card-body">
+              <h4>Large</h4>
+              <code>1.5rem (24px)</code>
+            </div>
+          </div>
+          <div class="card grid-col">
+            <div style="background-color: var(--color-primary); height: var(--spacing-xl)"></div>
+            <div class="card-body">
+              <h4>Extra Large</h4>
+              <code>2rem (32px)</code>
+            </div>
+          </div>
+          <div class="card grid-col">
+            <div style="background-color: var(--color-primary); height: var(--spacing-2xl)"></div>
+            <div class="card-body">
+              <h4>2X Large</h4>
+              <code>3rem (48px)</code>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <hr />
+
+      <section>
+        <h2>Steppers <span class="status-badge status-stable">Stable</span></h2>
         <ul class="stepper">
           <li class="stepper-item completed">
             <div class="stepper-circle">1</div>
@@ -448,7 +780,35 @@ console.log(message);</code></pre>
       <hr />
 
       <section>
-        <h2>Table</h2>
+        <h2>Stats Cards <span class="status-badge status-stable">Stable</span></h2>
+        <div class="grid">
+          <div class="stats-card grid-col">
+            <div class="stats-value">1,234</div>
+            <div class="stats-label">Total Users</div>
+            <div class="stats-change positive">+12.5%</div>
+          </div>
+          <div class="stats-card grid-col">
+            <div class="stats-value">$45,678</div>
+            <div class="stats-label">Revenue</div>
+            <div class="stats-change positive">+23.1%</div>
+          </div>
+          <div class="stats-card grid-col">
+            <div class="stats-value">89</div>
+            <div class="stats-label">Active Projects</div>
+            <div class="stats-change negative">-5.4%</div>
+          </div>
+          <div class="stats-card grid-col">
+            <div class="stats-value">98.5%</div>
+            <div class="stats-label">Uptime</div>
+            <div class="stats-change positive">+0.3%</div>
+          </div>
+        </div>
+      </section>
+
+      <hr />
+
+      <section>
+        <h2>Table <span class="status-badge status-stable">Stable</span></h2>
         <table class="table">
           <thead>
             <tr>
@@ -490,7 +850,7 @@ console.log(message);</code></pre>
       <hr />
 
       <section>
-        <h2>Tabs</h2>
+        <h2>Tabs <span class="status-badge status-stable">Stable</span></h2>
         <ul class="tabs">
           <li class="tabs-item active">Overview</li>
           <li class="tabs-item">Features</li>
@@ -520,7 +880,7 @@ console.log(message);</code></pre>
       <hr />
 
       <section>
-        <h2>Toggles</h2>
+        <h2>Toggles <span class="status-badge status-stable">Stable</span></h2>
         <div class="flex flex-col gap-md">
           <div class="flex items-center gap-md">
             <label class="toggle">
@@ -549,19 +909,78 @@ console.log(message);</code></pre>
       <hr />
 
       <section>
-        <h2>Tooltips</h2>
+        <h2>Timeline <span class="status-badge status-stable">Stable</span></h2>
+        <div class="timeline">
+          <div class="timeline-item">
+            <div class="timeline-marker"></div>
+            <div class="timeline-content">
+              <h4>Project Started</h4>
+              <p class="timeline-date">January 1, 2025</p>
+              <p>Initial project setup and configuration completed.</p>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-marker"></div>
+            <div class="timeline-content">
+              <h4>First Release</h4>
+              <p class="timeline-date">January 15, 2025</p>
+              <p>Version 1.0.0 released with core features.</p>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-marker"></div>
+            <div class="timeline-content">
+              <h4>Major Update</h4>
+              <p class="timeline-date">February 1, 2025</p>
+              <p>Added new components and improved performance.</p>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-marker"></div>
+            <div class="timeline-content">
+              <h4>User Milestone</h4>
+              <p class="timeline-date">March 1, 2025</p>
+              <p>Reached 10,000 active users.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <hr />
+
+      <section>
+        <h2>Toast Notifications <span class="status-badge status-stable">Stable</span></h2>
+        <div class="flex gap-md" style="flex-wrap: wrap">
+          <button class="button button-primary" onclick="window.showToast('This is an info message', 'info')">
+            Show Info Toast
+          </button>
+          <button class="button button-success" onclick="window.showToast('Success! Operation completed', 'success')">
+            Show Success Toast
+          </button>
+          <button
+            class="button button-warning"
+            onclick="window.showToast('Warning: Please check your input', 'warning')"
+          >
+            Show Warning Toast
+          </button>
+          <button class="button button-danger" onclick="window.showToast('Error: Something went wrong', 'error')">
+            Show Error Toast
+          </button>
+        </div>
+      </section>
+
+      <hr />
+
+      <section>
+        <h2>Tooltips <span class="status-badge status-stable">Stable</span></h2>
         <p>
           Hover over the
           <span class="tooltip" data-tooltip="This is helpful information">underlined text</span>
           to see tooltip examples.
         </p>
         <div class="flex gap-lg" style="flex-wrap: wrap; margin-top: var(--spacing-lg)">
-          <button class="button button-primary tooltip" data-tooltip="Click to submit">
-            Hover me
-          </button>
-          <span class="badge badge-success tooltip" data-tooltip="Active since 2024">
-            Status
-          </span>
+          <button class="button button-primary tooltip" data-tooltip="Click to submit">Hover me</button>
+          <span class="badge badge-success tooltip" data-tooltip="Active since 2024"> Status </span>
           <span class="tooltip" data-tooltip="Important deadline">📅 January 15, 2025</span>
         </div>
       </section>
@@ -569,7 +988,7 @@ console.log(message);</code></pre>
       <hr />
 
       <section>
-        <h2>Typography</h2>
+        <h2>Typography <span class="status-badge status-stable">Stable</span></h2>
         <h1>Heading 1</h1>
         <h2>Heading 2</h2>
         <h3>Heading 3</h3>
@@ -577,14 +996,57 @@ console.log(message);</code></pre>
         <h5>Heading 5</h5>
         <h6>Heading 6</h6>
         <p>
-          This is a paragraph with some <strong>bold text</strong> and some
-          <em>italic text</em>. You can also have
+          This is a paragraph with some <strong>bold text</strong> and some <em>italic text</em>. You can also have
           <a href="#">links within paragraphs</a> that look great.
         </p>
         <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore
+          magna aliqua.
         </p>
+      </section>
+
+      <hr />
+
+      <section>
+        <h2>Typography Scale <span class="status-badge status-stable">Stable</span></h2>
+        <div class="grid">
+          <div class="card grid-col">
+            <div class="card-body">
+              <h1 style="margin: 0">Heading 1</h1>
+              <code>2.5rem / 40px</code>
+            </div>
+          </div>
+          <div class="card grid-col">
+            <div class="card-body">
+              <h2 style="margin: 0">Heading 2</h2>
+              <code>2rem / 32px</code>
+            </div>
+          </div>
+          <div class="card grid-col">
+            <div class="card-body">
+              <h3 style="margin: 0">Heading 3</h3>
+              <code>1.75rem / 28px</code>
+            </div>
+          </div>
+          <div class="card grid-col">
+            <div class="card-body">
+              <h4 style="margin: 0">Heading 4</h4>
+              <code>1.5rem / 24px</code>
+            </div>
+          </div>
+          <div class="card grid-col">
+            <div class="card-body">
+              <h5 style="margin: 0">Heading 5</h5>
+              <code>1.25rem / 20px</code>
+            </div>
+          </div>
+          <div class="card grid-col">
+            <div class="card-body">
+              <h6 style="margin: 0">Heading 6</h6>
+              <code>1rem / 16px</code>
+            </div>
+          </div>
+        </div>
       </section>
     </main>
 
@@ -601,5 +1063,7 @@ console.log(message);</code></pre>
         </nav>
       </div>
     </footer>
+
+    <script src="index.js"></script>
   </body>
 </html>

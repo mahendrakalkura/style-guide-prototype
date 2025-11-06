@@ -37,6 +37,30 @@
       <hr />
 
       <section>
+        <h2>Avatars</h2>
+        <h3>Sizes</h3>
+        <div class="flex gap-md" style="align-items: center; flex-wrap: wrap">
+          <div class="avatar avatar-small">JD</div>
+          <div class="avatar">JD</div>
+          <div class="avatar avatar-large">JD</div>
+        </div>
+        <h3>With Images</h3>
+        <div class="flex gap-md" style="align-items: center; flex-wrap: wrap">
+          <div class="avatar">
+            <img src="https://i.pravatar.cc/150?img=1" alt="Avatar" />
+          </div>
+          <div class="avatar">
+            <img src="https://i.pravatar.cc/150?img=2" alt="Avatar" />
+          </div>
+          <div class="avatar">
+            <img src="https://i.pravatar.cc/150?img=3" alt="Avatar" />
+          </div>
+        </div>
+      </section>
+
+      <hr />
+
+      <section>
         <h2>Badges</h2>
         <div class="flex gap-md" style="flex-wrap: wrap">
           <span class="badge">Default</span>
@@ -45,6 +69,32 @@
           <span class="badge badge-danger">Danger</span>
           <span class="badge badge-warning">Warning</span>
         </div>
+      </section>
+
+      <hr />
+
+      <section>
+        <h2>Blockquotes</h2>
+        <blockquote>
+          "The only way to do great work is to love what you do. If you haven't found it yet, keep looking. Don't settle."
+          — Steve Jobs
+        </blockquote>
+        <blockquote>
+          "Design is not just what it looks like and feels like. Design is how it works."
+          — Steve Jobs
+        </blockquote>
+      </section>
+
+      <hr />
+
+      <section>
+        <h2>Breadcrumbs</h2>
+        <ul class="breadcrumb">
+          <li class="breadcrumb-item"><a href="#">Home</a></li>
+          <li class="breadcrumb-item"><a href="#">Products</a></li>
+          <li class="breadcrumb-item"><a href="#">Electronics</a></li>
+          <li class="breadcrumb-item active">Laptops</li>
+        </ul>
       </section>
 
       <hr />
@@ -116,6 +166,60 @@
               <button class="button button-success">Get Started</button>
             </div>
           </div>
+        </div>
+      </section>
+
+      <hr />
+
+      <section>
+        <h2>Chips</h2>
+        <div class="flex gap-md" style="flex-wrap: wrap">
+          <div class="chip">
+            JavaScript
+            <button class="chip-remove" aria-label="Remove">×</button>
+          </div>
+          <div class="chip">
+            Python
+            <button class="chip-remove" aria-label="Remove">×</button>
+          </div>
+          <div class="chip">
+            TypeScript
+            <button class="chip-remove" aria-label="Remove">×</button>
+          </div>
+          <div class="chip">
+            React
+            <button class="chip-remove" aria-label="Remove">×</button>
+          </div>
+        </div>
+      </section>
+
+      <hr />
+
+      <section>
+        <h2>Code Blocks</h2>
+        <h3>Inline Code</h3>
+        <p>Use the <code>console.log()</code> function to debug your JavaScript code.</p>
+        <p>The <code>useState</code> hook is essential in React development.</p>
+        <h3>Code Block</h3>
+        <pre><code>function greet(name) {
+  return `Hello, ${name}!`;
+}
+
+const message = greet("World");
+console.log(message);</code></pre>
+      </section>
+
+      <hr />
+
+      <section>
+        <h2>Empty State</h2>
+        <div class="empty-state">
+          <div class="empty-state-icon">📭</div>
+          <h3 class="empty-state-title">No items found</h3>
+          <p class="empty-state-description">
+            Try adjusting your search or filter to find what you're looking for.
+          </p>
+          <button class="button button-primary">Create New Item</button>
         </div>
       </section>
 
@@ -237,6 +341,17 @@
       <hr />
 
       <section>
+        <h2>Loading Spinners</h2>
+        <div class="flex gap-md" style="align-items: center; flex-wrap: wrap">
+          <div class="loading-spinner loading-spinner-small"></div>
+          <div class="loading-spinner"></div>
+          <div class="loading-spinner loading-spinner-large"></div>
+        </div>
+      </section>
+
+      <hr />
+
+      <section>
         <h2>Navigation Variants</h2>
         <nav class="nav">
           <a href="#" class="nav-link">Dashboard</a>
@@ -244,6 +359,90 @@
           <a href="#" class="nav-link">Team</a>
           <a href="#" class="nav-link">Settings</a>
         </nav>
+      </section>
+
+      <hr />
+
+      <section>
+        <h2>Pagination</h2>
+        <ul class="pagination">
+          <li class="pagination-item disabled">‹</li>
+          <li class="pagination-item active">1</li>
+          <li class="pagination-item">2</li>
+          <li class="pagination-item">3</li>
+          <li class="pagination-item">4</li>
+          <li class="pagination-item">5</li>
+          <li class="pagination-item">›</li>
+        </ul>
+      </section>
+
+      <hr />
+
+      <section>
+        <h2>Progress Bars</h2>
+        <h3>Default</h3>
+        <div class="progress">
+          <div class="progress-bar" style="width: 60%"></div>
+        </div>
+        <h3>Success</h3>
+        <div class="progress">
+          <div class="progress-bar progress-bar-success" style="width: 100%"></div>
+        </div>
+        <h3>Warning</h3>
+        <div class="progress">
+          <div class="progress-bar progress-bar-warning" style="width: 75%"></div>
+        </div>
+        <h3>Danger</h3>
+        <div class="progress">
+          <div class="progress-bar progress-bar-danger" style="width: 25%"></div>
+        </div>
+      </section>
+
+      <hr />
+
+      <section>
+        <h2>Search Input</h2>
+        <div class="search-input">
+          <input type="search" placeholder="Search for anything..." />
+        </div>
+      </section>
+
+      <hr />
+
+      <section>
+        <h2>Skeleton Loaders</h2>
+        <div class="flex gap-lg" style="flex-wrap: wrap">
+          <div>
+            <div class="skeleton skeleton-title"></div>
+            <div class="skeleton skeleton-text"></div>
+            <div class="skeleton skeleton-text"></div>
+            <div class="skeleton skeleton-text"></div>
+          </div>
+          <div class="skeleton skeleton-circle"></div>
+          <div class="skeleton skeleton-rectangle" style="flex: 1; min-width: 200px"></div>
+        </div>
+      </section>
+
+      <hr />
+
+      <section>
+        <h2>Steppers</h2>
+        <ul class="stepper">
+          <li class="stepper-item completed">
+            <div class="stepper-circle">1</div>
+            <span class="stepper-label">Account</span>
+            <div class="stepper-line"></div>
+          </li>
+          <li class="stepper-item active">
+            <div class="stepper-circle">2</div>
+            <span class="stepper-label">Profile</span>
+            <div class="stepper-line"></div>
+          </li>
+          <li class="stepper-item">
+            <div class="stepper-circle">3</div>
+            <span class="stepper-label">Confirm</span>
+          </li>
+        </ul>
       </section>
 
       <hr />
@@ -286,6 +485,85 @@
             </tr>
           </tbody>
         </table>
+      </section>
+
+      <hr />
+
+      <section>
+        <h2>Tabs</h2>
+        <ul class="tabs">
+          <li class="tabs-item active">Overview</li>
+          <li class="tabs-item">Features</li>
+          <li class="tabs-item">Pricing</li>
+          <li class="tabs-item">Documentation</li>
+        </ul>
+        <div class="tabs-content">
+          <div class="tabs-panel active">
+            <h3>Overview</h3>
+            <p>This is the overview tab content. Here you can see a summary of the main features and benefits.</p>
+          </div>
+          <div class="tabs-panel">
+            <h3>Features</h3>
+            <p>Detailed information about all the features available in this product.</p>
+          </div>
+          <div class="tabs-panel">
+            <h3>Pricing</h3>
+            <p>View our pricing plans and choose the one that fits your needs.</p>
+          </div>
+          <div class="tabs-panel">
+            <h3>Documentation</h3>
+            <p>Access comprehensive documentation to get started quickly.</p>
+          </div>
+        </div>
+      </section>
+
+      <hr />
+
+      <section>
+        <h2>Toggles</h2>
+        <div class="flex flex-col gap-md">
+          <div class="flex items-center gap-md">
+            <label class="toggle">
+              <input type="checkbox" checked />
+              <span class="toggle-slider"></span>
+            </label>
+            <span>Enable notifications</span>
+          </div>
+          <div class="flex items-center gap-md">
+            <label class="toggle">
+              <input type="checkbox" />
+              <span class="toggle-slider"></span>
+            </label>
+            <span>Dark mode</span>
+          </div>
+          <div class="flex items-center gap-md">
+            <label class="toggle">
+              <input type="checkbox" checked />
+              <span class="toggle-slider"></span>
+            </label>
+            <span>Auto-save</span>
+          </div>
+        </div>
+      </section>
+
+      <hr />
+
+      <section>
+        <h2>Tooltips</h2>
+        <p>
+          Hover over the
+          <span class="tooltip" data-tooltip="This is helpful information">underlined text</span>
+          to see tooltip examples.
+        </p>
+        <div class="flex gap-lg" style="flex-wrap: wrap; margin-top: var(--spacing-lg)">
+          <button class="button button-primary tooltip" data-tooltip="Click to submit">
+            Hover me
+          </button>
+          <span class="badge badge-success tooltip" data-tooltip="Active since 2024">
+            Status
+          </span>
+          <span class="tooltip" data-tooltip="Important deadline">📅 January 15, 2025</span>
+        </div>
       </section>
 
       <hr />
